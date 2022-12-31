@@ -1,11 +1,24 @@
 import { Fragment } from "react";
 
-import Header from "./components/Layout/Header"
+import { Routes, Route } from "react-router-dom";
+
+import Header from "./components/Layout/Header";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <Fragment>
       <Header />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Fragment>
+              <Home />
+            </Fragment>
+          }
+        />
+      </Routes>
     </Fragment>
   );
 }
