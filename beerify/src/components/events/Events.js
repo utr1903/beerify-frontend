@@ -36,6 +36,7 @@ const Events = (props) => {
     for (const eventInfo of eventInfos) {
       eventsList.push(
         <Event
+          key={eventInfo.id}
           id={eventInfo.id}
           name={eventInfo.name}
           place={eventInfo.place}
@@ -45,7 +46,7 @@ const Events = (props) => {
     }
 
     eventsMap.push(
-      <div className={classes["events"]}>
+      <div className={classes["events"]} key={eventType}>
         <h2>{eventType}</h2>
         <ul>{eventsList}</ul>
       </div>
