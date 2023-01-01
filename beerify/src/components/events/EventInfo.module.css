@@ -1,0 +1,33 @@
+.event_info {
+  width: 100%;
+  text-align: center;
+  justify-content: space-between;
+  margin: 6rem auto 0rem auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background: #eeddbd;
+  opacity: 0.6;
+}
+
+.event_name {
+  font-weight: 500;
+  font-size: large;
+}
+
+.event_place {
+  font-size: medium;
+}
+
+.event_time {
+  font-size: small;
+  font-style: italic;
+}
+
+.event_items_ul {
+  list-style: none;
+  font-style: italic;
+}
+
+.event_items_li {
+  font-style: italic;
+}
