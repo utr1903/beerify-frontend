@@ -1,8 +1,6 @@
-import { Fragment } from "react";
-import { useSelector } from "react-redux";
+import classes from "./Events.module.css";
 
 import Event from "./Event";
-import classes from "./Events.module.css";
 
 const DUMMY_EVENTS = {
   Football: [

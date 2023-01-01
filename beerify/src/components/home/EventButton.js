@@ -1,6 +1,6 @@
-import { useNavigate } from "react-router-dom";
-
 import classes from "./EventButton.module.css";
+
+import { useNavigate } from "react-router-dom";
 
 const EventButton = (props) => {
   const navigate = useNavigate();

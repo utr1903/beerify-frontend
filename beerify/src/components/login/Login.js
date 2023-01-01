@@ -1,7 +1,8 @@
+import classes from "./Login.module.css";
+
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-import classes from "./Login.module.css";
 import { authActions } from "../../store/auth";
 
 const Auth = () => {

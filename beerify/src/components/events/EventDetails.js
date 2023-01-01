@@ -1,4 +1,4 @@
-import classes from "./EventInfo.module.css";
+import classes from "./EventDetails.module.css";
 
 import { useParams } from "react-router-dom";
 
@@ -56,7 +56,7 @@ const DUMMY_EVENTS = {
   },
 };
 
-const EventInfo = (props) => {
+const EventDetails = (props) => {
   const params = useParams();
   const eventDetails = DUMMY_EVENTS[params.eventId];
 
@@ -85,4 +85,4 @@ const EventInfo = (props) => {
   );
 };
 
-export default EventInfo;
+export default EventDetails;

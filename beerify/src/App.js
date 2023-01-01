@@ -1,12 +1,11 @@
 import { Fragment } from "react";
-
 import { Routes, Route } from "react-router-dom";
 
 import Header from "./components/Layout/header/Header";
 import Signup from "./components/signup/Signup";
 import Login from "./components/login/Login";
 import Events from "./components/events/Events";
-import EventInfo from "./components/events/EventInfo";
+import EventDetails from "./components/events/EventDetails";
 import Home from "./components/home/Home";
 import Background from "./components/Layout/background/Background";
 
@@ -44,7 +43,7 @@ function App() {
           path="/events/:eventId"
           element={
             <Fragment>
-              <EventInfo />
+              <EventDetails />
             </Fragment>
           }
         />
