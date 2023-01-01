@@ -7,11 +7,13 @@ import Signup from "./components/signup/Signup";
 import Login from "./components/login/Login";
 import Events from "./components/events/Events";
 import Home from "./components/home/Home";
+import Background from "./components/Layout/background/Background";
 
 function App() {
   return (
     <Fragment>
       <Header />
+      <Background />
       <Routes>
         <Route
           path="/signup"
