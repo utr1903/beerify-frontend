@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import { useSelector } from "react-redux";
 
 import HeaderSignupButton from "./HeaderSignupButton";
 import HeaderLoginButton from "./HeaderLoginButton";
@@ -7,7 +8,7 @@ import HeaderLogoutButton from "./HeaderLogoutButton";
 import classes from "./Header.module.css";
 
 const Header = (props) => {
-  const isLoggedIn = true;
+  const isLoggedIn = useSelector((state) => state.auth.isAuthenticated);
 
   return (
     <Fragment>

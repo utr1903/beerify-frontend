@@ -1,12 +1,12 @@
-import { useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import classes from "./HeaderSignupButton.module.css";
 
 const HeaderSignupButton = (props) => {
-  const [buttonIsHighlighted, setButtonIsHighlighted] = useState(true);
+  const navigate = useNavigate();
 
   const onClick = () => {
-    console.log("Here");
+    navigate("/signup");
   };
 
   return (
