@@ -6,6 +6,7 @@ import HeaderLoginButton from "./HeaderLoginButton";
 import HeaderLogoutButton from "./HeaderLogoutButton";
 
 import classes from "./Header.module.css";
+import HomeButton from "./HomeButton";
 
 const Header = (props) => {
   const isLoggedIn = useSelector((state) => state.auth.isAuthenticated);
@@ -13,7 +14,8 @@ const Header = (props) => {
   return (
     <Fragment>
       <header className={classes["header"]}>
-        <h1>Beerify</h1>
+        {/* <h1>Beerify</h1> */}
+        <HomeButton />
         {!isLoggedIn && (
           <ul>
             <li>
