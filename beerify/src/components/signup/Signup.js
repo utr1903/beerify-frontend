@@ -28,7 +28,7 @@ const Auth = () => {
         </div>
         <div className={classes.control}>
           <label htmlFor="password">Password Again</label>
-          <input type="password" id="password" />
+          <input type="password" id="password_again" />
         </div>
         <button>Signup</button>
       </form>
