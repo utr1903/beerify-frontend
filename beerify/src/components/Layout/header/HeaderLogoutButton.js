@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-import { authActions } from "../../store/auth";
+import { authActions } from "../../../store/auth";
 import classes from "./HeaderLoginButton.module.css";
 
 const HeaderLogoutButton = (props) => {

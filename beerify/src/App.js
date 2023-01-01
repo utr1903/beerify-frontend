@@ -2,7 +2,7 @@ import { Fragment } from "react";
 
 import { Routes, Route } from "react-router-dom";
 
-import Header from "./components/Layout/Header";
+import Header from "./components/Layout/header/Header";
 import Signup from "./components/signup/Signup";
 import Login from "./components/login/Login";
 import Events from "./components/events/Events";
