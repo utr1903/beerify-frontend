@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import HeaderSignupButton from "./HeaderSignupButton";
 import HeaderLoginButton from "./HeaderLoginButton";
 import HeaderLogoutButton from "./HeaderLogoutButton";
+import HeaderCartButton from "./HeaderCartButton";
 
 import classes from "./Header.module.css";
 import HomeButton from "./HomeButton";
@@ -14,7 +15,6 @@ const Header = (props) => {
   return (
     <Fragment>
       <header className={classes["header"]}>
-        {/* <h1>Beerify</h1> */}
         <HomeButton />
         {!isLoggedIn && (
           <ul>
@@ -24,12 +24,18 @@ const Header = (props) => {
             <li>
               <HeaderLoginButton />
             </li>
+            <li>
+              <HeaderCartButton />
+            </li>
           </ul>
         )}
         {isLoggedIn && (
           <ul>
             <li>
               <HeaderLogoutButton />
+            </li>
+            <li>
+              <HeaderCartButton />
             </li>
           </ul>
         )}

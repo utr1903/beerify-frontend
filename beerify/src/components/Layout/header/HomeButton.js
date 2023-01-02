@@ -11,7 +11,7 @@ const HomeButton = (props) => {
 
   return (
     <button className={classes["button"]} onClick={onClick}>
-      <h1>Beerify</h1>
+      <h1 className={classes["h1"]}>Beerify</h1>
     </button>
   );
 };
