@@ -8,6 +8,7 @@ import Events from "./components/events/Events";
 import EventDetails from "./components/events/EventDetails";
 import Home from "./components/home/Home";
 import Background from "./components/Layout/background/Background";
+import Cart from "./components/cart/Cart";
 
 function App() {
   return (
@@ -44,6 +45,14 @@ function App() {
           element={
             <Fragment>
               <EventDetails />
+            </Fragment>
+          }
+        />
+        <Route
+          path="/cart"
+          element={
+            <Fragment>
+              <Cart />
             </Fragment>
           }
         />

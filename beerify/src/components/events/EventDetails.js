@@ -1,7 +1,7 @@
 import classes from "./EventDetails.module.css";
 
 import { useParams } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import { cartActions } from "../../store/cart";
 import EventItemForm from "./EventItemForm";
@@ -14,12 +14,12 @@ const DUMMY_EVENTS = {
     items: {
       "item-1": {
         name: "Augustiner",
-        price: 2.00,
+        price: 2.0,
         unit: "€",
       },
       "item-2": {
         name: "Hotdog",
-        price: 3.00,
+        price: 3.0,
         unit: "€",
       },
     },
@@ -31,12 +31,12 @@ const DUMMY_EVENTS = {
     items: {
       "item-2": {
         name: "Hotdog",
-        price: 3.00,
+        price: 3.0,
         unit: "€",
       },
       "item-3": {
         name: "Fries",
-        price: 2.00,
+        price: 2.0,
         unit: "€",
       },
     },
@@ -48,12 +48,12 @@ const DUMMY_EVENTS = {
     items: {
       "item-1": {
         name: "Augustiner",
-        price: 2.00,
+        price: 2.0,
         unit: "€",
       },
       "item-4": {
         name: "Coke",
-        price: 1.50,
+        price: 1.5,
         unit: "€",
       },
     },
@@ -62,7 +62,6 @@ const DUMMY_EVENTS = {
 
 const EventDetails = (props) => {
   const dispatch = useDispatch();
-  const test = useSelector((state) => state.cart.items);
 
   const params = useParams();
 
@@ -74,7 +73,6 @@ const EventDetails = (props) => {
         price: DUMMY_EVENTS[item.eventId].items[item.itemId].price,
       })
     );
-    console.log(test);
   };
 
   const eventDetails = DUMMY_EVENTS[params.eventId];
