@@ -2,6 +2,8 @@ import classes from "./EventDetails.module.css";
 
 import { useParams } from "react-router-dom";
 
+import EventItemForm from "./EventItemForm";
+
 const DUMMY_EVENTS = {
   "event-football-1": {
     name: "Besiktas - Sivas",
@@ -64,23 +66,29 @@ const EventDetails = (props) => {
   for (const [itemId, itemInfo] of Object.entries(eventDetails.items)) {
     eventItems.push(
       <li className={classes["event_items_li"]} key={itemId}>
-        <div>
-          <p>{itemInfo.name}</p>
-          <p>
+        <div className={classes["event_items_img"]}>IMAGE</div>
+        <div className={classes["event_items_details"]}>
+          <div>{itemInfo.name}</div>
+          <div>
             {itemInfo.unit}
             {itemInfo.price}
-          </p>
+          </div>
+        </div>
+        <div className={classes["event_items_amount"]}>
+          <EventItemForm id={itemId} />
         </div>
       </li>
     );
   }
 
   return (
-    <div className={classes["event_info"]}>
+    <div className={classes["event_details"]}>
       <p className={classes["event_name"]}>{eventDetails.name}</p>
       <p className={classes["event_place"]}>{eventDetails.place}</p>
       <p className={classes["event_time"]}>{eventDetails.startTime}</p>
-      <ul className={classes["event_items_ul"]}>{eventItems}</ul>
+      <div>
+        <ul className={classes["event_items_ul"]}>{eventItems}</ul>
+      </div>
     </div>
   );
 };
