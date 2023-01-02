@@ -69,6 +69,8 @@ const EventDetails = (props) => {
     dispatch(
       cartActions.addItem({
         id: item.itemId,
+        name: DUMMY_EVENTS[item.eventId].items[item.itemId].name,
+        eventId: item.eventId,
         amount: item.amount,
         price: DUMMY_EVENTS[item.eventId].items[item.itemId].price,
       })
