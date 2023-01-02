@@ -1,6 +1,6 @@
-import { useRef, useState } from "react";
-
 import classes from "./EventItemForm.module.css";
+
+import { useRef, useState } from "react";
 
 const EventItemForm = (props) => {
   const [amountIsValid, setAmountIsValid] = useState(true);
@@ -17,16 +17,20 @@ const EventItemForm = (props) => {
       return;
     }
 
-    // props.onAddItemToCart(enteredAmount);
+    props.addItemToCart({
+      itemId: props.itemId,
+      eventId: props.eventId,
+      amount: enteredAmount,
+    });
   };
 
   return (
     <form className={classes["form"]} onSubmit={submitHandler}>
       <div className={classes["input"]}>
-        <label htmlFor={props.id}>Amount</label>
+        <label htmlFor={props.itemId}>Amount</label>
         <input
           ref={amountInputRef}
-          id={props.id}
+          id={props.itemId}
           type="number"
           min="1"
           step="1"
